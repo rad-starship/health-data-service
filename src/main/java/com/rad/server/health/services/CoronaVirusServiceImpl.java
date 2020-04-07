@@ -5,9 +5,7 @@ package com.rad.server.health.services;
 
 import java.util.*;
 import org.keycloak.adapters.springsecurity.client.*;
-import org.springframework.http.*;
 import org.springframework.stereotype.*;
-import org.springframework.web.client.*;
 import com.google.gson.*;
 import com.rad.server.health.entities.*;
 
@@ -19,25 +17,15 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 {
     final Gson gson = new Gson();
 
-	final String coronaVirusServiceUri = "http://localhost:8082/coronavirus/data";
+	final String coronaVirusServiceUri = "https://rapidapi.com/collection/coronavirus-covid-19"; //real URL should be here
 	
 	//@Autowired
 	KeycloakRestTemplate keycloakRestTemplate;
 	
 	public List<CoronaVirusData> getData()
 	{
-	    RestTemplate restTemplate = new RestTemplate();
-	    // String result = restTemplate.getForObject(coronaVirusServiceUri, String.class);
-	    // System.out.println(result);
 	    return getSampleList();
 	}
-	
-	public List<CoronaVirusData> getDataByKeycloakRestTemplate()
-	{
-		ResponseEntity<String> response = keycloakRestTemplate.getForEntity(coronaVirusServiceUri, String.class);
-	    System.out.println(response.getBody());
-	    return getSampleList();
-	}	
 	
 	public JsonArray getSample()
 	{
