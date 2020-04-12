@@ -1,6 +1,7 @@
 package com.rad.server.health.entities;
 
 import javax.persistence.*;
+import java.util.Map;
 
 /**
  * @author raz_o
@@ -17,8 +18,13 @@ public class CoronaVirusData
 	double	long_;			// example: -116.5765
 	int		confirmed;		// example: 1181
 	int		recovered;		// example: 0
+	int 	critical;		//example: 3
 	int		deaths;			// example: 20
-	
+
+	public CoronaVirusData(){
+
+	}
+
 	public CoronaVirusData(String id, String provinceState, String countryRegion, long lastUpdate, double lat, double long_, int confirmed, int recovered, int deaths)
 	{
 		super();
@@ -31,6 +37,27 @@ public class CoronaVirusData
 		this.confirmed = confirmed;
 		this.recovered = recovered;
 		this.deaths = deaths;
+	}
+
+	public CoronaVirusData(String id,Map<String,Object> countryData) {
+
+		super();
+		this.id = id;
+		if(countryData.get("country")!= null)
+			this.countryRegion = (String)countryData.get("country");
+		if(countryData.get("confirmed")!= null)
+			this.confirmed = (int)countryData.get("confirmed");
+		if(countryData.get("recovered")!= null)
+			this.recovered = (int)countryData.get("recovered");
+		if(countryData.get("deaths")!= null)
+			this.deaths =(int) countryData.get("deaths");
+		if(countryData.get("critical")!= null)
+			this.critical =(int) countryData.get("critical");
+		if(countryData.get("latitude")!= null)
+			this.lat = (double) countryData.get("latitude");
+		if(countryData.get("longitude")!= null)
+			this.long_ = (double) countryData.get("longitude");
+
 	}
 
 	public String getId()
@@ -126,6 +153,6 @@ public class CoronaVirusData
 	@Override
 	public String toString()
 	{
-		return "CoronaVirusData [id=" + this.id + ", provinceState=" + this.provinceState + ", countryRegion=" + this.countryRegion + ", lastUpdate=" + this.lastUpdate + ", lat=" + this.lat + ", long_=" + this.long_ + ", confirmed=" + this.confirmed + ", recovered=" + this.recovered + ", deaths=" + this.deaths + "]";
+		return "CoronaVirusData [id=" + this.id + ", provinceState=" + this.provinceState + ", countryRegion=" + this.countryRegion + ", lastUpdate=" + this.lastUpdate + ", lat=" + this.lat + ", long_=" + this.long_ + ", confirmed=" + this.confirmed + ", recovered=" + this.recovered +", critical=" + this.critical + ", deaths=" + this.deaths + "]";
 	}
 }

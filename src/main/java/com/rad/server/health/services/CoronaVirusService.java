@@ -13,4 +13,5 @@ import com.rad.server.health.entities.*;
 public interface CoronaVirusService
 {
 	List<CoronaVirusData> getData();
+
 }
