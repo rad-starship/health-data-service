@@ -1,7 +1,8 @@
 package com.rad.server.health.entities;
 
+import java.util.*;
 import javax.persistence.*;
-import java.util.Map;
+import com.rad.server.health.services.*;
 
 /**
  * @author raz_o
@@ -11,26 +12,32 @@ public class CoronaVirusData
 {
 	@Id
 	String	id;				// example: 81
+	String  continent;		// example: Europe
+	String	country;		// example: "United Kingdom"
 	String	provinceState;	// example: "British Virgin Islands"
-	String	countryRegion;	// example: "United Kingdom"
+	long	lastChange;		// example: 1586081775000
 	long	lastUpdate;		// example: 1586081775000
 	double	lat;			// example: 53.9333
 	double	long_;			// example: -116.5765
 	int		confirmed;		// example: 1181
 	int		recovered;		// example: 0
-	int 	critical;		//example: 3
+	int     active;         // example: 7
+	int 	critical;		// example: 3
 	int		deaths;			// example: 20
+	
 
-	public CoronaVirusData(){
+	public CoronaVirusData()
+	{
 
 	}
 
-	public CoronaVirusData(String id, String provinceState, String countryRegion, long lastUpdate, double lat, double long_, int confirmed, int recovered, int deaths)
+	public CoronaVirusData(String id, String continent, String country, long lastUpdate, double lat, double long_, int confirmed, int recovered, int deaths)
 	{
 		super();
 		this.id = id;
+		this.continent = continent;
+		this.country = country;
 		this.provinceState = provinceState;
-		this.countryRegion = countryRegion;
 		this.lastUpdate = lastUpdate;
 		this.lat = lat;
 		this.long_ = long_;
@@ -39,25 +46,41 @@ public class CoronaVirusData
 		this.deaths = deaths;
 	}
 
-	public CoronaVirusData(String id,Map<String,Object> countryData) {
-
+	public CoronaVirusData(String id, Map<String, Object> countryData)
+	{
 		super();
-		this.id = id;
-		if(countryData.get("country")!= null)
-			this.countryRegion = (String)countryData.get("country");
-		if(countryData.get("confirmed")!= null)
-			this.confirmed = (int)countryData.get("confirmed");
-		if(countryData.get("recovered")!= null)
-			this.recovered = (int)countryData.get("recovered");
-		if(countryData.get("deaths")!= null)
-			this.deaths =(int) countryData.get("deaths");
-		if(countryData.get("critical")!= null)
-			this.critical =(int) countryData.get("critical");
-		if(countryData.get("latitude")!= null)
-			this.lat = (double) countryData.get("latitude");
-		if(countryData.get("longitude")!= null)
-			this.long_ = (double) countryData.get("longitude");
 
+		this.id = id;
+		
+		if (countryData.get("provinceState") != null)
+			this.provinceState = (String) countryData.get("provinceState");
+		if (countryData.get("province") != null)
+			this.provinceState = (String) countryData.get("province");
+		if (countryData.get("country") != null)
+		{
+			this.country = (String) countryData.get("country");
+			this.continent = ContinentUtils.getContinent(country);
+		}
+		if (countryData.get("lastChange") != null)
+			this.lastChange = javax.xml.bind.DatatypeConverter.parseDateTime(countryData.get("lastChange").toString()).getTimeInMillis();
+		if (countryData.get("lastUpdate") != null)
+			this.lastUpdate = javax.xml.bind.DatatypeConverter.parseDateTime(countryData.get("lastUpdate").toString()).getTimeInMillis();	
+		if (countryData.get("date") != null)
+			this.lastUpdate = javax.xml.bind.DatatypeConverter.parseDateTime(countryData.get("date").toString()).getTimeInMillis();			
+		if (countryData.get("latitude") != null)
+			this.lat = (double) countryData.get("latitude");
+		if (countryData.get("longitude") != null)
+			this.long_ = (double) countryData.get("longitude");
+		if (countryData.get("confirmed") != null)
+			this.confirmed = (int) countryData.get("confirmed");
+		if (countryData.get("recovered") != null)
+			this.recovered = (int) countryData.get("recovered");
+		if (countryData.get("active") != null)
+			this.active = (int) countryData.get("active");		
+		if (countryData.get("critical") != null)
+			this.critical = (int) countryData.get("critical");
+		if (countryData.get("deaths") != null)
+			this.deaths = (int) countryData.get("deaths");		
 	}
 
 	public String getId()
@@ -80,14 +103,14 @@ public class CoronaVirusData
 		this.provinceState = provinceState;
 	}
 
-	public String getCountryRegion()
+	public String getCountry()
 	{
-		return this.countryRegion;
+		return this.country;
 	}
 
-	public void setCountryRegion(String countryRegion)
+	public void setCountry(String country)
 	{
-		this.countryRegion = countryRegion;
+		this.country = country;
 	}
 
 	public long getLastUpdate()
@@ -150,9 +173,29 @@ public class CoronaVirusData
 		this.deaths = deaths;
 	}
 
+	public long getLastChange()
+	{
+		return this.lastChange;
+	}
+
+	public void setLastChange(long lastChange)
+	{
+		this.lastChange = lastChange;
+	}
+
 	@Override
 	public String toString()
 	{
-		return "CoronaVirusData [id=" + this.id + ", provinceState=" + this.provinceState + ", countryRegion=" + this.countryRegion + ", lastUpdate=" + this.lastUpdate + ", lat=" + this.lat + ", long_=" + this.long_ + ", confirmed=" + this.confirmed + ", recovered=" + this.recovered +", critical=" + this.critical + ", deaths=" + this.deaths + "]";
+		return "CoronaVirusData [id=" + this.id + ", continent=" + this.continent + ", country=" + this.country + ", provinceState=" + this.provinceState + ", lastChange=" + this.lastChange + ", lastUpdate=" + this.lastUpdate + ", lat=" + this.lat + ", long_=" + this.long_ + ", confirmed=" + this.confirmed + ", recovered=" + this.recovered + ", active=" + this.active + ", critical=" + this.critical + ", deaths=" + this.deaths + "]";
+	}
+
+	public String getContinent()
+	{
+		return this.continent;
+	}
+
+	public void setContinent(String continent)
+	{
+		this.continent = continent;
 	}
 }
