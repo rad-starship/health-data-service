@@ -1,0 +1,2279 @@
+[
+  {
+    "country": "Afghanistan",
+    "confirmed": 2171,
+    "recovered": 260,
+    "critical": 7,
+    "deaths": 64,
+    "latitude": 33.93911,
+    "longitude": 67.709953
+  },
+  {
+    "country": "Åland Islands",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 60.1995487,
+    "longitude": 20.3711715
+  },
+  {
+    "country": "Albania",
+    "confirmed": 773,
+    "recovered": 470,
+    "critical": 4,
+    "deaths": 31,
+    "latitude": 41.153332,
+    "longitude": 20.168331
+  },
+  {
+    "country": "Algeria",
+    "confirmed": 3848,
+    "recovered": 1702,
+    "critical": 22,
+    "deaths": 444,
+    "latitude": 28.033886,
+    "longitude": 1.659626
+  },
+  {
+    "country": "American Samoa",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -14.270972,
+    "longitude": -170.132217
+  },
+  {
+    "country": "Andorra",
+    "confirmed": 743,
+    "recovered": 423,
+    "critical": 17,
+    "deaths": 42,
+    "latitude": 42.546245,
+    "longitude": 1.601554
+  },
+  {
+    "country": "Angola",
+    "confirmed": 27,
+    "recovered": 7,
+    "critical": 0,
+    "deaths": 2,
+    "latitude": -11.202692,
+    "longitude": 17.873887
+  },
+  {
+    "country": "Anguilla",
+    "confirmed": 3,
+    "recovered": 3,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 18.220554,
+    "longitude": -63.068615
+  },
+  {
+    "country": "Antarctica",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -75.250973,
+    "longitude": -0.071389
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "confirmed": 24,
+    "recovered": 11,
+    "critical": 1,
+    "deaths": 3,
+    "latitude": 17.060816,
+    "longitude": -61.796428
+  },
+  {
+    "country": "Argentina",
+    "confirmed": 4285,
+    "recovered": 1192,
+    "critical": 144,
+    "deaths": 214,
+    "latitude": -38.416097,
+    "longitude": -63.616672
+  },
+  {
+    "country": "Armenia",
+    "confirmed": 2066,
+    "recovered": 929,
+    "critical": 10,
+    "deaths": 32,
+    "latitude": 40.069099,
+    "longitude": 45.038189
+  },
+  {
+    "country": "Aruba",
+    "confirmed": 100,
+    "recovered": 73,
+    "critical": 4,
+    "deaths": 2,
+    "latitude": 12.52111,
+    "longitude": -69.968338
+  },
+  {
+    "country": "Australia",
+    "confirmed": 6765,
+    "recovered": 5717,
+    "critical": 34,
+    "deaths": 91,
+    "latitude": -25.274398,
+    "longitude": 133.775136
+  },
+  {
+    "country": "Austria",
+    "confirmed": 15452,
+    "recovered": 12907,
+    "critical": 128,
+    "deaths": 584,
+    "latitude": 47.516231,
+    "longitude": 14.550072
+  },
+  {
+    "country": "Azerbaijan",
+    "confirmed": 1804,
+    "recovered": 1325,
+    "critical": 17,
+    "deaths": 24,
+    "latitude": 40.143105,
+    "longitude": 47.576927
+  },
+  {
+    "country": "Bahamas",
+    "confirmed": 80,
+    "recovered": 25,
+    "critical": 1,
+    "deaths": 11,
+    "latitude": 25.03428,
+    "longitude": -77.39628
+  },
+  {
+    "country": "Bahrain",
+    "confirmed": 3037,
+    "recovered": 1495,
+    "critical": 1,
+    "deaths": 8,
+    "latitude": 25.930414,
+    "longitude": 50.637772
+  },
+  {
+    "country": "Bangladesh",
+    "confirmed": 7667,
+    "recovered": 160,
+    "critical": 1,
+    "deaths": 168,
+    "latitude": 23.684994,
+    "longitude": 90.356331
+  },
+  {
+    "country": "Barbados",
+    "confirmed": 80,
+    "recovered": 39,
+    "critical": 4,
+    "deaths": 7,
+    "latitude": 13.193887,
+    "longitude": -59.543198
+  },
+  {
+    "country": "Belarus",
+    "confirmed": 14027,
+    "recovered": 2386,
+    "critical": 92,
+    "deaths": 89,
+    "latitude": 53.709807,
+    "longitude": 27.953389
+  },
+  {
+    "country": "Belgium",
+    "confirmed": 48519,
+    "recovered": 11576,
+    "critical": 769,
+    "deaths": 7594,
+    "latitude": 50.503887,
+    "longitude": 4.469936
+  },
+  {
+    "country": "Belize",
+    "confirmed": 18,
+    "recovered": 9,
+    "critical": 1,
+    "deaths": 2,
+    "latitude": 17.189877,
+    "longitude": -88.49765
+  },
+  {
+    "country": "Benin",
+    "confirmed": 64,
+    "recovered": 33,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 9.30769,
+    "longitude": 2.315834
+  },
+  {
+    "country": "Bermuda",
+    "confirmed": 111,
+    "recovered": 48,
+    "critical": 10,
+    "deaths": 6,
+    "latitude": 32.321384,
+    "longitude": -64.75737
+  },
+  {
+    "country": "Bhutan",
+    "confirmed": 7,
+    "recovered": 5,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 27.514162,
+    "longitude": 90.433601
+  },
+  {
+    "country": "Bolivia",
+    "confirmed": 1110,
+    "recovered": 117,
+    "critical": 3,
+    "deaths": 59,
+    "latitude": -16.290154,
+    "longitude": -63.588653
+  },
+  {
+    "country": "Bonaire, Sint Eustatius and Saba",
+    "confirmed": 5,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 12.1683718,
+    "longitude": -68.308183
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "confirmed": 1757,
+    "recovered": 727,
+    "critical": 4,
+    "deaths": 69,
+    "latitude": 43.915886,
+    "longitude": 17.679076
+  },
+  {
+    "country": "Botswana",
+    "confirmed": 23,
+    "recovered": 5,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": -22.328474,
+    "longitude": 24.684866
+  },
+  {
+    "country": "Bouvet Island",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -54.423199,
+    "longitude": 3.413194
+  },
+  {
+    "country": "Brazil",
+    "confirmed": 79685,
+    "recovered": 34132,
+    "critical": 8318,
+    "deaths": 5513,
+    "latitude": -14.235004,
+    "longitude": -51.92528
+  },
+  {
+    "country": "British Indian Ocean Territory",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -6.343194,
+    "longitude": 71.876519
+  },
+  {
+    "country": "British Virgin Islands",
+    "confirmed": 54,
+    "recovered": 3,
+    "critical": 0,
+    "deaths": 3,
+    "latitude": 18.420695,
+    "longitude": -64.639968
+  },
+  {
+    "country": "Brunei",
+    "confirmed": 138,
+    "recovered": 124,
+    "critical": 2,
+    "deaths": 1,
+    "latitude": 4.535277,
+    "longitude": 114.727669
+  },
+  {
+    "country": "Bulgaria",
+    "confirmed": 1488,
+    "recovered": 266,
+    "critical": 38,
+    "deaths": 65,
+    "latitude": 42.733883,
+    "longitude": 25.48583
+  },
+  {
+    "country": "Burkina Faso",
+    "confirmed": 641,
+    "recovered": 498,
+    "critical": 0,
+    "deaths": 43,
+    "latitude": 12.238333,
+    "longitude": -1.561593
+  },
+  {
+    "country": "Burundi",
+    "confirmed": 11,
+    "recovered": 4,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": -3.373056,
+    "longitude": 29.918886
+  },
+  {
+    "country": "Cabo Verde",
+    "confirmed": 114,
+    "recovered": 2,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 16.002082,
+    "longitude": -24.013197
+  },
+  {
+    "country": "Cambodia",
+    "confirmed": 122,
+    "recovered": 119,
+    "critical": 1,
+    "deaths": 0,
+    "latitude": 12.565679,
+    "longitude": 104.990963
+  },
+  {
+    "country": "Cameroon",
+    "confirmed": 1832,
+    "recovered": 934,
+    "critical": 12,
+    "deaths": 61,
+    "latitude": 7.369722,
+    "longitude": 12.354722
+  },
+  {
+    "country": "Canada",
+    "confirmed": 52865,
+    "recovered": 20327,
+    "critical": 557,
+    "deaths": 3154,
+    "latitude": 56.130366,
+    "longitude": -106.346771
+  },
+  {
+    "country": "CAR",
+    "confirmed": 50,
+    "recovered": 10,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 6.611111,
+    "longitude": 20.939444
+  },
+  {
+    "country": "Cayman Islands",
+    "confirmed": 73,
+    "recovered": 10,
+    "critical": 3,
+    "deaths": 1,
+    "latitude": 19.513469,
+    "longitude": -80.566956
+  },
+  {
+    "country": "Chad",
+    "confirmed": 52,
+    "recovered": 19,
+    "critical": 0,
+    "deaths": 2,
+    "latitude": 15.454166,
+    "longitude": 18.732207
+  },
+  {
+    "country": "Channel Islands",
+    "confirmed": 537,
+    "recovered": 386,
+    "critical": 0,
+    "deaths": 38,
+    "latitude": 49.372284,
+    "longitude": -2.364351
+  },
+  {
+    "country": "Chile",
+    "confirmed": 15135,
+    "recovered": 8057,
+    "critical": 377,
+    "deaths": 216,
+    "latitude": -35.675147,
+    "longitude": -71.542969
+  },
+  {
+    "country": "China",
+    "confirmed": 88462,
+    "recovered": 82808,
+    "critical": 41,
+    "deaths": 4633,
+    "latitude": 35.86166,
+    "longitude": 104.195397
+  },
+  {
+    "country": "Christmas Island",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -10.447525,
+    "longitude": 105.690449
+  },
+  {
+    "country": "Cocos (Keeling) Islands",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -12.164165,
+    "longitude": 96.870956
+  },
+  {
+    "country": "Colombia",
+    "confirmed": 6211,
+    "recovered": 1411,
+    "critical": 118,
+    "deaths": 278,
+    "latitude": 4.570868,
+    "longitude": -74.297333
+  },
+  {
+    "country": "Comoros",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -11.875001,
+    "longitude": 43.872219
+  },
+  {
+    "country": "Congo",
+    "confirmed": 220,
+    "recovered": 19,
+    "critical": 0,
+    "deaths": 9,
+    "latitude": -0.228021,
+    "longitude": 15.827659
+  },
+  {
+    "country": "Cook Islands",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -21.236736,
+    "longitude": -159.777671
+  },
+  {
+    "country": "Costa Rica",
+    "confirmed": 713,
+    "recovered": 323,
+    "critical": 8,
+    "deaths": 6,
+    "latitude": 9.748917,
+    "longitude": -83.753428
+  },
+  {
+    "country": "Croatia",
+    "confirmed": 2076,
+    "recovered": 1348,
+    "critical": 20,
+    "deaths": 69,
+    "latitude": 45.1,
+    "longitude": 15.2
+  },
+  {
+    "country": "Cuba",
+    "confirmed": 1467,
+    "recovered": 617,
+    "critical": 14,
+    "deaths": 58,
+    "latitude": 21.521757,
+    "longitude": -77.781167
+  },
+  {
+    "country": "Curaçao",
+    "confirmed": 16,
+    "recovered": 13,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 12.16957,
+    "longitude": -68.990021
+  },
+  {
+    "country": "Cyprus",
+    "confirmed": 843,
+    "recovered": 148,
+    "critical": 15,
+    "deaths": 15,
+    "latitude": 35.126413,
+    "longitude": 33.429859
+  },
+  {
+    "country": "Czech Republic",
+    "confirmed": 7581,
+    "recovered": 3120,
+    "critical": 68,
+    "deaths": 227,
+    "latitude": 49.817492,
+    "longitude": 15.472962
+  },
+  {
+    "country": "Denmark",
+    "confirmed": 9158,
+    "recovered": 6546,
+    "critical": 62,
+    "deaths": 452,
+    "latitude": 56.26392,
+    "longitude": 9.501785
+  },
+  {
+    "country": "Diamond Princess",
+    "confirmed": 712,
+    "recovered": 645,
+    "critical": 4,
+    "deaths": 13,
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "country": "Djibouti",
+    "confirmed": 1077,
+    "recovered": 599,
+    "critical": 0,
+    "deaths": 2,
+    "latitude": 11.825138,
+    "longitude": 42.590275
+  },
+  {
+    "country": "Dominica",
+    "confirmed": 16,
+    "recovered": 13,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 15.414999,
+    "longitude": -61.370976
+  },
+  {
+    "country": "Dominican Republic",
+    "confirmed": 6652,
+    "recovered": 1228,
+    "critical": 144,
+    "deaths": 293,
+    "latitude": 18.735693,
+    "longitude": -70.162651
+  },
+  {
+    "country": "DRC",
+    "confirmed": 500,
+    "recovered": 65,
+    "critical": 0,
+    "deaths": 31,
+    "latitude": -4.038333,
+    "longitude": 21.758664
+  },
+  {
+    "country": "Ecuador",
+    "confirmed": 24675,
+    "recovered": 1557,
+    "critical": 146,
+    "deaths": 883,
+    "latitude": -1.831239,
+    "longitude": -78.183406
+  },
+  {
+    "country": "Egypt",
+    "confirmed": 5268,
+    "recovered": 1335,
+    "critical": 0,
+    "deaths": 380,
+    "latitude": 26.820553,
+    "longitude": 30.802498
+  },
+  {
+    "country": "El Salvador",
+    "confirmed": 395,
+    "recovered": 118,
+    "critical": 3,
+    "deaths": 9,
+    "latitude": 13.794185,
+    "longitude": -88.89653
+  },
+  {
+    "country": "Equatorial Guinea",
+    "confirmed": 315,
+    "recovered": 9,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 1.650801,
+    "longitude": 10.267895
+  },
+  {
+    "country": "Eritrea",
+    "confirmed": 39,
+    "recovered": 19,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 15.179384,
+    "longitude": 39.782334
+  },
+  {
+    "country": "Estonia",
+    "confirmed": 1689,
+    "recovered": 249,
+    "critical": 9,
+    "deaths": 52,
+    "latitude": 58.595272,
+    "longitude": 25.013607
+  },
+  {
+    "country": "Eswatini",
+    "confirmed": 100,
+    "recovered": 12,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": -26.522503,
+    "longitude": 31.465866
+  },
+  {
+    "country": "Ethiopia",
+    "confirmed": 131,
+    "recovered": 59,
+    "critical": 0,
+    "deaths": 3,
+    "latitude": 9.145,
+    "longitude": 40.489673
+  },
+  {
+    "country": "Faeroe Islands",
+    "confirmed": 187,
+    "recovered": 184,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 61.892635,
+    "longitude": -6.911806
+  },
+  {
+    "country": "Falkland Islands",
+    "confirmed": 13,
+    "recovered": 11,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -51.796253,
+    "longitude": -59.523613
+  },
+  {
+    "country": "Fiji",
+    "confirmed": 18,
+    "recovered": 12,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -16.578193,
+    "longitude": 179.414413
+  },
+  {
+    "country": "Finland",
+    "confirmed": 4995,
+    "recovered": 3000,
+    "critical": 48,
+    "deaths": 211,
+    "latitude": 61.92411,
+    "longitude": 25.748151
+  },
+  {
+    "country": "France",
+    "confirmed": 167605,
+    "recovered": 48228,
+    "critical": 4207,
+    "deaths": 24087,
+    "latitude": 46.227638,
+    "longitude": 2.213749
+  },
+  {
+    "country": "French Guiana",
+    "confirmed": 126,
+    "recovered": 94,
+    "critical": 2,
+    "deaths": 1,
+    "latitude": 3.933889,
+    "longitude": -53.125782
+  },
+  {
+    "country": "French Polynesia",
+    "confirmed": 58,
+    "recovered": 50,
+    "critical": 1,
+    "deaths": 0,
+    "latitude": -17.679742,
+    "longitude": -149.406843
+  },
+  {
+    "country": "French Southern Territories",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -49.280366,
+    "longitude": 69.348557
+  },
+  {
+    "country": "Gabon",
+    "confirmed": 276,
+    "recovered": 67,
+    "critical": 1,
+    "deaths": 3,
+    "latitude": -0.803689,
+    "longitude": 11.609444
+  },
+  {
+    "country": "Gambia",
+    "confirmed": 11,
+    "recovered": 8,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 13.443182,
+    "longitude": -15.310139
+  },
+  {
+    "country": "Georgia",
+    "confirmed": 539,
+    "recovered": 178,
+    "critical": 6,
+    "deaths": 6,
+    "latitude": 42.315407,
+    "longitude": 43.356892
+  },
+  {
+    "country": "Germany",
+    "confirmed": 161845,
+    "recovered": 123500,
+    "critical": 2415,
+    "deaths": 6470,
+    "latitude": 51.165691,
+    "longitude": 10.451526
+  },
+  {
+    "country": "Ghana",
+    "confirmed": 2074,
+    "recovered": 212,
+    "critical": 4,
+    "deaths": 17,
+    "latitude": 7.946527,
+    "longitude": -1.023194
+  },
+  {
+    "country": "Gibraltar",
+    "confirmed": 141,
+    "recovered": 131,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 36.137741,
+    "longitude": -5.345374
+  },
+  {
+    "country": "Greece",
+    "confirmed": 2576,
+    "recovered": 577,
+    "critical": 41,
+    "deaths": 139,
+    "latitude": 39.074208,
+    "longitude": 21.824312
+  },
+  {
+    "country": "Greenland",
+    "confirmed": 11,
+    "recovered": 11,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 71.706936,
+    "longitude": -42.604303
+  },
+  {
+    "country": "Grenada",
+    "confirmed": 20,
+    "recovered": 13,
+    "critical": 4,
+    "deaths": 0,
+    "latitude": 12.262776,
+    "longitude": -61.604171
+  },
+  {
+    "country": "Guadeloupe",
+    "confirmed": 151,
+    "recovered": 95,
+    "critical": 11,
+    "deaths": 12,
+    "latitude": 16.995971,
+    "longitude": -62.067641
+  },
+  {
+    "country": "Guam",
+    "confirmed": 32,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 13.444304,
+    "longitude": 144.793731
+  },
+  {
+    "country": "Guatemala",
+    "confirmed": 585,
+    "recovered": 65,
+    "critical": 5,
+    "deaths": 16,
+    "latitude": 15.783471,
+    "longitude": -90.230759
+  },
+  {
+    "country": "Guernsey",
+    "confirmed": 239,
+    "recovered": 73,
+    "critical": 0,
+    "deaths": 9,
+    "latitude": 49.465691,
+    "longitude": -2.585278
+  },
+  {
+    "country": "Guinea",
+    "confirmed": 1351,
+    "recovered": 313,
+    "critical": 0,
+    "deaths": 7,
+    "latitude": 9.945587,
+    "longitude": -9.696645
+  },
+  {
+    "country": "Guinea-Bissau",
+    "confirmed": 205,
+    "recovered": 19,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 11.803749,
+    "longitude": -15.180413
+  },
+  {
+    "country": "Guyana",
+    "confirmed": 78,
+    "recovered": 18,
+    "critical": 3,
+    "deaths": 8,
+    "latitude": 4.860416,
+    "longitude": -58.93018
+  },
+  {
+    "country": "Haiti",
+    "confirmed": 76,
+    "recovered": 8,
+    "critical": 0,
+    "deaths": 7,
+    "latitude": 18.971187,
+    "longitude": -72.285215
+  },
+  {
+    "country": "Heard Island and Mcdonald Islands",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -53.08181,
+    "longitude": 73.504158
+  },
+  {
+    "country": "Honduras",
+    "confirmed": 771,
+    "recovered": 79,
+    "critical": 10,
+    "deaths": 71,
+    "latitude": 15.199999,
+    "longitude": -86.241905
+  },
+  {
+    "country": "Hong Kong",
+    "confirmed": 1038,
+    "recovered": 846,
+    "critical": 4,
+    "deaths": 4,
+    "latitude": 22.396428,
+    "longitude": 114.109497
+  },
+  {
+    "country": "Hungary",
+    "confirmed": 2775,
+    "recovered": 581,
+    "critical": 54,
+    "deaths": 312,
+    "latitude": 47.162494,
+    "longitude": 19.503304
+  },
+  {
+    "country": "Iceland",
+    "confirmed": 1797,
+    "recovered": 1656,
+    "critical": 0,
+    "deaths": 10,
+    "latitude": 64.963051,
+    "longitude": -19.020835
+  },
+  {
+    "country": "India",
+    "confirmed": 33610,
+    "recovered": 8437,
+    "critical": 0,
+    "deaths": 1079,
+    "latitude": 20.593684,
+    "longitude": 78.96288
+  },
+  {
+    "country": "Indonesia",
+    "confirmed": 10118,
+    "recovered": 1522,
+    "critical": 0,
+    "deaths": 792,
+    "latitude": -0.789275,
+    "longitude": 113.921327
+  },
+  {
+    "country": "Iran",
+    "confirmed": 94640,
+    "recovered": 75103,
+    "critical": 2976,
+    "deaths": 6028,
+    "latitude": 32.427908,
+    "longitude": 53.688046
+  },
+  {
+    "country": "Iraq",
+    "confirmed": 2003,
+    "recovered": 1346,
+    "critical": 0,
+    "deaths": 92,
+    "latitude": 33.223191,
+    "longitude": 43.679291
+  },
+  {
+    "country": "Ireland",
+    "confirmed": 20253,
+    "recovered": 13386,
+    "critical": 129,
+    "deaths": 1190,
+    "latitude": 53.41291,
+    "longitude": -8.24389
+  },
+  {
+    "country": "Isle of Man",
+    "confirmed": 313,
+    "recovered": 258,
+    "critical": 21,
+    "deaths": 21,
+    "latitude": 54.236107,
+    "longitude": -4.548056
+  },
+  {
+    "country": "Israel",
+    "confirmed": 15870,
+    "recovered": 8412,
+    "critical": 117,
+    "deaths": 219,
+    "latitude": 31.046051,
+    "longitude": 34.851612
+  },
+  {
+    "country": "Italy",
+    "confirmed": 203591,
+    "recovered": 71252,
+    "critical": 1795,
+    "deaths": 27682,
+    "latitude": 41.87194,
+    "longitude": 12.56738
+  },
+  {
+    "country": "Ivory Coast",
+    "confirmed": 1238,
+    "recovered": 557,
+    "critical": 0,
+    "deaths": 14,
+    "latitude": 7.539989,
+    "longitude": -5.54708
+  },
+  {
+    "country": "Jamaica",
+    "confirmed": 396,
+    "recovered": 29,
+    "critical": 3,
+    "deaths": 7,
+    "latitude": 18.109581,
+    "longitude": -77.297508
+  },
+  {
+    "country": "Japan",
+    "confirmed": 14325,
+    "recovered": 2368,
+    "critical": 306,
+    "deaths": 425,
+    "latitude": 36.204824,
+    "longitude": 138.252924
+  },
+  {
+    "country": "Jersey",
+    "confirmed": 245,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 12,
+    "latitude": 49.214439,
+    "longitude": -2.13125
+  },
+  {
+    "country": "Jordan",
+    "confirmed": 451,
+    "recovered": 356,
+    "critical": 5,
+    "deaths": 8,
+    "latitude": 30.585164,
+    "longitude": 36.238414
+  },
+  {
+    "country": "Kazakhstan",
+    "confirmed": 3356,
+    "recovered": 858,
+    "critical": 41,
+    "deaths": 26,
+    "latitude": 48.019573,
+    "longitude": 66.923684
+  },
+  {
+    "country": "Kenya",
+    "confirmed": 396,
+    "recovered": 144,
+    "critical": 2,
+    "deaths": 17,
+    "latitude": -0.023559,
+    "longitude": 37.906193
+  },
+  {
+    "country": "Kiribati",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -3.370417,
+    "longitude": -168.734039
+  },
+  {
+    "country": "Kosovo* (disputed teritory)",
+    "confirmed": 510,
+    "recovered": 93,
+    "critical": 0,
+    "deaths": 12,
+    "latitude": 42.66394,
+    "longitude": 21.09611
+  },
+  {
+    "country": "Kuwait",
+    "confirmed": 4024,
+    "recovered": 2241,
+    "critical": 66,
+    "deaths": 26,
+    "latitude": 29.31166,
+    "longitude": 47.481766
+  },
+  {
+    "country": "Kyrgyzstan",
+    "confirmed": 746,
+    "recovered": 462,
+    "critical": 12,
+    "deaths": 8,
+    "latitude": 41.20438,
+    "longitude": 74.766098
+  },
+  {
+    "country": "Laos",
+    "confirmed": 19,
+    "recovered": 8,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 19.85627,
+    "longitude": 102.495496
+  },
+  {
+    "country": "Latvia",
+    "confirmed": 858,
+    "recovered": 348,
+    "critical": 3,
+    "deaths": 15,
+    "latitude": 56.879635,
+    "longitude": 24.603189
+  },
+  {
+    "country": "Lebanon",
+    "confirmed": 725,
+    "recovered": 150,
+    "critical": 44,
+    "deaths": 24,
+    "latitude": 33.854721,
+    "longitude": 35.862285
+  },
+  {
+    "country": "Lesotho",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -29.609988,
+    "longitude": 28.233608
+  },
+  {
+    "country": "Liberia",
+    "confirmed": 141,
+    "recovered": 45,
+    "critical": 0,
+    "deaths": 16,
+    "latitude": 6.428055,
+    "longitude": -9.429499
+  },
+  {
+    "country": "Libya",
+    "confirmed": 61,
+    "recovered": 18,
+    "critical": 0,
+    "deaths": 2,
+    "latitude": 26.3351,
+    "longitude": 17.228331
+  },
+  {
+    "country": "Liechtenstein",
+    "confirmed": 82,
+    "recovered": 55,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 47.166,
+    "longitude": 9.555373
+  },
+  {
+    "country": "Lithuania",
+    "confirmed": 1449,
+    "recovered": 589,
+    "critical": 17,
+    "deaths": 45,
+    "latitude": 55.169438,
+    "longitude": 23.881275
+  },
+  {
+    "country": "Luxembourg",
+    "confirmed": 3769,
+    "recovered": 3134,
+    "critical": 21,
+    "deaths": 89,
+    "latitude": 49.815273,
+    "longitude": 6.129583
+  },
+  {
+    "country": "Macao",
+    "confirmed": 45,
+    "recovered": 35,
+    "critical": 1,
+    "deaths": 0,
+    "latitude": 22.198745,
+    "longitude": 113.543873
+  },
+  {
+    "country": "Madagascar",
+    "confirmed": 128,
+    "recovered": 92,
+    "critical": 1,
+    "deaths": 0,
+    "latitude": -18.766947,
+    "longitude": 46.869107
+  },
+  {
+    "country": "Malawi",
+    "confirmed": 36,
+    "recovered": 7,
+    "critical": 1,
+    "deaths": 3,
+    "latitude": -13.254308,
+    "longitude": 34.301525
+  },
+  {
+    "country": "Malaysia",
+    "confirmed": 6002,
+    "recovered": 4171,
+    "critical": 40,
+    "deaths": 102,
+    "latitude": 4.210484,
+    "longitude": 101.975766
+  },
+  {
+    "country": "Maldives",
+    "confirmed": 396,
+    "recovered": 17,
+    "critical": 2,
+    "deaths": 1,
+    "latitude": 3.202778,
+    "longitude": 73.22068
+  },
+  {
+    "country": "Mali",
+    "confirmed": 482,
+    "recovered": 129,
+    "critical": 0,
+    "deaths": 25,
+    "latitude": 17.570692,
+    "longitude": -3.996166
+  },
+  {
+    "country": "Malta",
+    "confirmed": 465,
+    "recovered": 351,
+    "critical": 1,
+    "deaths": 4,
+    "latitude": 35.937496,
+    "longitude": 14.375416
+  },
+  {
+    "country": "Marshall Islands",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 7.131474,
+    "longitude": 171.184478
+  },
+  {
+    "country": "Martinique",
+    "confirmed": 178,
+    "recovered": 83,
+    "critical": 5,
+    "deaths": 14,
+    "latitude": 14.641528,
+    "longitude": -61.024174
+  },
+  {
+    "country": "Mauritania",
+    "confirmed": 8,
+    "recovered": 6,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 21.00789,
+    "longitude": -10.940835
+  },
+  {
+    "country": "Mauritius",
+    "confirmed": 334,
+    "recovered": 310,
+    "critical": 3,
+    "deaths": 10,
+    "latitude": -20.348404,
+    "longitude": 57.552152
+  },
+  {
+    "country": "Mayotte",
+    "confirmed": 539,
+    "recovered": 235,
+    "critical": 4,
+    "deaths": 4,
+    "latitude": -12.8275,
+    "longitude": 45.166244
+  },
+  {
+    "country": "Mexico",
+    "confirmed": 17799,
+    "recovered": 11423,
+    "critical": 378,
+    "deaths": 1732,
+    "latitude": 23.634501,
+    "longitude": -102.552784
+  },
+  {
+    "country": "Micronesia",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 7.425554,
+    "longitude": 150.550812
+  },
+  {
+    "country": "Moldova",
+    "confirmed": 3897,
+    "recovered": 1182,
+    "critical": 237,
+    "deaths": 116,
+    "latitude": 47.411631,
+    "longitude": 28.369885
+  },
+  {
+    "country": "Monaco",
+    "confirmed": 95,
+    "recovered": 58,
+    "critical": 1,
+    "deaths": 4,
+    "latitude": 43.750298,
+    "longitude": 7.412841
+  },
+  {
+    "country": "Mongolia",
+    "confirmed": 38,
+    "recovered": 10,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 46.862496,
+    "longitude": 103.846656
+  },
+  {
+    "country": "Montenegro",
+    "confirmed": 322,
+    "recovered": 206,
+    "critical": 2,
+    "deaths": 7,
+    "latitude": 42.708678,
+    "longitude": 19.37439
+  },
+  {
+    "country": "Montserrat",
+    "confirmed": 11,
+    "recovered": 2,
+    "critical": 1,
+    "deaths": 1,
+    "latitude": 16.742498,
+    "longitude": -62.187366
+  },
+  {
+    "country": "Morocco",
+    "confirmed": 4359,
+    "recovered": 969,
+    "critical": 1,
+    "deaths": 168,
+    "latitude": 31.791702,
+    "longitude": -7.09262
+  },
+  {
+    "country": "Mozambique",
+    "confirmed": 76,
+    "recovered": 12,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -18.665695,
+    "longitude": 35.529562
+  },
+  {
+    "country": "MS Zaandam",
+    "confirmed": 9,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 2,
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "country": "Myanmar",
+    "confirmed": 150,
+    "recovered": 27,
+    "critical": 0,
+    "deaths": 6,
+    "latitude": 21.913965,
+    "longitude": 95.956223
+  },
+  {
+    "country": "Namibia",
+    "confirmed": 16,
+    "recovered": 8,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -22.95764,
+    "longitude": 18.49041
+  },
+  {
+    "country": "Nauru",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -0.522778,
+    "longitude": 166.931503
+  },
+  {
+    "country": "Nepal",
+    "confirmed": 57,
+    "recovered": 16,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 28.394857,
+    "longitude": 84.124008
+  },
+  {
+    "country": "Netherlands",
+    "confirmed": 39316,
+    "recovered": 3459,
+    "critical": 783,
+    "deaths": 4795,
+    "latitude": 52.132633,
+    "longitude": 5.291266
+  },
+  {
+    "country": "New Caledonia",
+    "confirmed": 18,
+    "recovered": 17,
+    "critical": 1,
+    "deaths": 0,
+    "latitude": -20.904305,
+    "longitude": 165.618042
+  },
+  {
+    "country": "New Zealand",
+    "confirmed": 1476,
+    "recovered": 1241,
+    "critical": 1,
+    "deaths": 19,
+    "latitude": -40.900557,
+    "longitude": 174.885971
+  },
+  {
+    "country": "Nicaragua",
+    "confirmed": 13,
+    "recovered": 7,
+    "critical": 0,
+    "deaths": 3,
+    "latitude": 12.865416,
+    "longitude": -85.207229
+  },
+  {
+    "country": "Niger",
+    "confirmed": 713,
+    "recovered": 435,
+    "critical": 0,
+    "deaths": 32,
+    "latitude": 17.607789,
+    "longitude": 8.081666
+  },
+  {
+    "country": "Nigeria",
+    "confirmed": 1728,
+    "recovered": 307,
+    "critical": 2,
+    "deaths": 51,
+    "latitude": 9.081999,
+    "longitude": 8.675277
+  },
+  {
+    "country": "Niue",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -19.054445,
+    "longitude": -169.867233
+  },
+  {
+    "country": "Norfolk Island",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -29.040835,
+    "longitude": 167.954712
+  },
+  {
+    "country": "North Korea",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 40.339852,
+    "longitude": 127.510093
+  },
+  {
+    "country": "North Macedonia",
+    "confirmed": 1465,
+    "recovered": 738,
+    "critical": 13,
+    "deaths": 77,
+    "latitude": 41.608635,
+    "longitude": 21.745275
+  },
+  {
+    "country": "Northern Mariana Islands",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 17.33083,
+    "longitude": 145.38469
+  },
+  {
+    "country": "Norway",
+    "confirmed": 7710,
+    "recovered": 32,
+    "critical": 40,
+    "deaths": 207,
+    "latitude": 60.472024,
+    "longitude": 8.468946
+  },
+  {
+    "country": "Oman",
+    "confirmed": 2348,
+    "recovered": 495,
+    "critical": 3,
+    "deaths": 11,
+    "latitude": 21.512583,
+    "longitude": 55.923255
+  },
+  {
+    "country": "Pakistan",
+    "confirmed": 16117,
+    "recovered": 4105,
+    "critical": 111,
+    "deaths": 358,
+    "latitude": 30.375321,
+    "longitude": 69.345116
+  },
+  {
+    "country": "Palau",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 7.51498,
+    "longitude": 134.58252
+  },
+  {
+    "country": "Palestine",
+    "confirmed": 495,
+    "recovered": 92,
+    "critical": 0,
+    "deaths": 4,
+    "latitude": 31.952162,
+    "longitude": 35.233154
+  },
+  {
+    "country": "Panama",
+    "confirmed": 6378,
+    "recovered": 527,
+    "critical": 92,
+    "deaths": 178,
+    "latitude": 8.537981,
+    "longitude": -80.782127
+  },
+  {
+    "country": "Papua New Guinea",
+    "confirmed": 8,
+    "recovered": 1,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -6.314993,
+    "longitude": 143.95555
+  },
+  {
+    "country": "Paraguay",
+    "confirmed": 249,
+    "recovered": 111,
+    "critical": 1,
+    "deaths": 9,
+    "latitude": -23.442503,
+    "longitude": -58.443832
+  },
+  {
+    "country": "Peru",
+    "confirmed": 33931,
+    "recovered": 10037,
+    "critical": 623,
+    "deaths": 943,
+    "latitude": -9.189967,
+    "longitude": -75.015152
+  },
+  {
+    "country": "Philippines",
+    "confirmed": 8488,
+    "recovered": 1043,
+    "critical": 31,
+    "deaths": 568,
+    "latitude": 12.879721,
+    "longitude": 121.774017
+  },
+  {
+    "country": "Pitcairn",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -24.703615,
+    "longitude": -127.439308
+  },
+  {
+    "country": "Poland",
+    "confirmed": 12781,
+    "recovered": 3236,
+    "critical": 160,
+    "deaths": 628,
+    "latitude": 51.919438,
+    "longitude": 19.145136
+  },
+  {
+    "country": "Portugal",
+    "confirmed": 25045,
+    "recovered": 1519,
+    "critical": 172,
+    "deaths": 989,
+    "latitude": 39.399872,
+    "longitude": -8.224454
+  },
+  {
+    "country": "Puerto Rico",
+    "confirmed": 39,
+    "recovered": 1,
+    "critical": 0,
+    "deaths": 2,
+    "latitude": 18.220833,
+    "longitude": -66.590149
+  },
+  {
+    "country": "Qatar",
+    "confirmed": 13409,
+    "recovered": 1372,
+    "critical": 72,
+    "deaths": 10,
+    "latitude": 25.354826,
+    "longitude": 51.183884
+  },
+  {
+    "country": "Reunion",
+    "confirmed": 420,
+    "recovered": 300,
+    "critical": 2,
+    "deaths": 0,
+    "latitude": -21.115141,
+    "longitude": 55.536384
+  },
+  {
+    "country": "Romania",
+    "confirmed": 12240,
+    "recovered": 4017,
+    "critical": 221,
+    "deaths": 695,
+    "latitude": 45.943161,
+    "longitude": 24.96676
+  },
+  {
+    "country": "Russia",
+    "confirmed": 106498,
+    "recovered": 11619,
+    "critical": 2300,
+    "deaths": 1073,
+    "latitude": 61.52401,
+    "longitude": 105.318756
+  },
+  {
+    "country": "Rwanda",
+    "confirmed": 225,
+    "recovered": 98,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -1.940278,
+    "longitude": 29.873888
+  },
+  {
+    "country": "Saint Barthélemy",
+    "confirmed": 6,
+    "recovered": 6,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 17.9139222,
+    "longitude": -62.8338521
+  },
+  {
+    "country": "Saint Helena, Ascension and Tristan da Cunha",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -24.143474,
+    "longitude": -10.030696
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "confirmed": 15,
+    "recovered": 6,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 17.357822,
+    "longitude": -62.782998
+  },
+  {
+    "country": "Saint Lucia",
+    "confirmed": 17,
+    "recovered": 15,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 13.909444,
+    "longitude": -60.978893
+  },
+  {
+    "country": "Saint Martin",
+    "confirmed": 38,
+    "recovered": 24,
+    "critical": 3,
+    "deaths": 3,
+    "latitude": 18.075277,
+    "longitude": -63.060001
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "confirmed": 1,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 46.941936,
+    "longitude": -56.27111
+  },
+  {
+    "country": "Samoa",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -13.759029,
+    "longitude": -172.104629
+  },
+  {
+    "country": "San Marino",
+    "confirmed": 569,
+    "recovered": 78,
+    "critical": 6,
+    "deaths": 41,
+    "latitude": 43.94236,
+    "longitude": 12.457777
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "confirmed": 14,
+    "recovered": 4,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 0.18636,
+    "longitude": 6.613081
+  },
+  {
+    "country": "Saudi Arabia",
+    "confirmed": 22753,
+    "recovered": 3163,
+    "critical": 125,
+    "deaths": 162,
+    "latitude": 23.885942,
+    "longitude": 45.079162
+  },
+  {
+    "country": "Senegal",
+    "confirmed": 933,
+    "recovered": 334,
+    "critical": 1,
+    "deaths": 9,
+    "latitude": 14.497401,
+    "longitude": -14.452362
+  },
+  {
+    "country": "Serbia",
+    "confirmed": 9009,
+    "recovered": 1343,
+    "critical": 71,
+    "deaths": 179,
+    "latitude": 44.016521,
+    "longitude": 21.005859
+  },
+  {
+    "country": "Seychelles",
+    "confirmed": 11,
+    "recovered": 6,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -4.679574,
+    "longitude": 55.491977
+  },
+  {
+    "country": "Sierra Leone",
+    "confirmed": 124,
+    "recovered": 21,
+    "critical": 0,
+    "deaths": 7,
+    "latitude": 8.460555,
+    "longitude": -11.779889
+  },
+  {
+    "country": "Singapore",
+    "confirmed": 16169,
+    "recovered": 1188,
+    "critical": 22,
+    "deaths": 14,
+    "latitude": 1.352083,
+    "longitude": 103.819836
+  },
+  {
+    "country": "Sint Maarten",
+    "confirmed": 75,
+    "recovered": 33,
+    "critical": 7,
+    "deaths": 13,
+    "latitude": 18.0347188,
+    "longitude": -63.0681114
+  },
+  {
+    "country": "Slovakia",
+    "confirmed": 1396,
+    "recovered": 524,
+    "critical": 8,
+    "deaths": 23,
+    "latitude": 48.669026,
+    "longitude": 19.699024
+  },
+  {
+    "country": "Slovenia",
+    "confirmed": 1429,
+    "recovered": 1091,
+    "critical": 22,
+    "deaths": 91,
+    "latitude": 46.151241,
+    "longitude": 14.995463
+  },
+  {
+    "country": "Solomon Islands",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -9.64571,
+    "longitude": 160.156194
+  },
+  {
+    "country": "Somalia",
+    "confirmed": 582,
+    "recovered": 20,
+    "critical": 2,
+    "deaths": 28,
+    "latitude": 5.152149,
+    "longitude": 46.199616
+  },
+  {
+    "country": "South Africa",
+    "confirmed": 5350,
+    "recovered": 2073,
+    "critical": 36,
+    "deaths": 103,
+    "latitude": -30.559482,
+    "longitude": 22.937506
+  },
+  {
+    "country": "South Georgia and the South Sandwich Islands",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -54.429579,
+    "longitude": -36.587909
+  },
+  {
+    "country": "South Korea",
+    "confirmed": 10765,
+    "recovered": 9059,
+    "critical": 55,
+    "deaths": 247,
+    "latitude": 35.907757,
+    "longitude": 127.766922
+  },
+  {
+    "country": "South Sudan",
+    "confirmed": 35,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 7.8626845,
+    "longitude": 29.6949232
+  },
+  {
+    "country": "Spain",
+    "confirmed": 239639,
+    "recovered": 137984,
+    "critical": 2676,
+    "deaths": 24543,
+    "latitude": 40.463667,
+    "longitude": -3.74922
+  },
+  {
+    "country": "Sri Lanka",
+    "confirmed": 653,
+    "recovered": 139,
+    "critical": 1,
+    "deaths": 7,
+    "latitude": 7.873054,
+    "longitude": 80.771797
+  },
+  {
+    "country": "St. Vincent Grenadines",
+    "confirmed": 16,
+    "recovered": 8,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 12.984305,
+    "longitude": -61.287228
+  },
+  {
+    "country": "Sudan",
+    "confirmed": 375,
+    "recovered": 32,
+    "critical": 0,
+    "deaths": 28,
+    "latitude": 12.862807,
+    "longitude": 30.217636
+  },
+  {
+    "country": "Suriname",
+    "confirmed": 10,
+    "recovered": 8,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 3.919305,
+    "longitude": -56.027783
+  },
+  {
+    "country": "Svalbard and Jan Mayen",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 77.553604,
+    "longitude": 23.670272
+  },
+  {
+    "country": "Sweden",
+    "confirmed": 21092,
+    "recovered": 1005,
+    "critical": 531,
+    "deaths": 2586,
+    "latitude": 60.128161,
+    "longitude": 18.643501
+  },
+  {
+    "country": "Switzerland",
+    "confirmed": 29586,
+    "recovered": 23100,
+    "critical": 167,
+    "deaths": 1737,
+    "latitude": 46.818188,
+    "longitude": 8.227512
+  },
+  {
+    "country": "Syria",
+    "confirmed": 43,
+    "recovered": 21,
+    "critical": 0,
+    "deaths": 3,
+    "latitude": 34.802075,
+    "longitude": 38.996815
+  },
+  {
+    "country": "Taiwan",
+    "confirmed": 429,
+    "recovered": 322,
+    "critical": 0,
+    "deaths": 6,
+    "latitude": 23.69781,
+    "longitude": 120.960515
+  },
+  {
+    "country": "Tajikistan",
+    "confirmed": 15,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 38.861034,
+    "longitude": 71.276093
+  },
+  {
+    "country": "Tanzania",
+    "confirmed": 480,
+    "recovered": 167,
+    "critical": 7,
+    "deaths": 16,
+    "latitude": -6.369028,
+    "longitude": 34.888822
+  },
+  {
+    "country": "Thailand",
+    "confirmed": 2954,
+    "recovered": 2684,
+    "critical": 61,
+    "deaths": 54,
+    "latitude": 15.870032,
+    "longitude": 100.992541
+  },
+  {
+    "country": "Timor-Leste",
+    "confirmed": 24,
+    "recovered": 16,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -8.874217,
+    "longitude": 125.727539
+  },
+  {
+    "country": "Togo",
+    "confirmed": 116,
+    "recovered": 65,
+    "critical": 0,
+    "deaths": 9,
+    "latitude": 8.619543,
+    "longitude": 0.824782
+  },
+  {
+    "country": "Tokelau",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -8.967363,
+    "longitude": -171.855881
+  },
+  {
+    "country": "Tonga",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -21.178986,
+    "longitude": -175.198242
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "confirmed": 116,
+    "recovered": 72,
+    "critical": 0,
+    "deaths": 8,
+    "latitude": 10.691803,
+    "longitude": -61.222503
+  },
+  {
+    "country": "Tunisia",
+    "confirmed": 980,
+    "recovered": 294,
+    "critical": 20,
+    "deaths": 40,
+    "latitude": 33.886917,
+    "longitude": 9.537499
+  },
+  {
+    "country": "Turkey",
+    "confirmed": 117589,
+    "recovered": 44040,
+    "critical": 1574,
+    "deaths": 3081,
+    "latitude": 38.963745,
+    "longitude": 35.243322
+  },
+  {
+    "country": "Turkmenistan",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 38.969719,
+    "longitude": 59.556278
+  },
+  {
+    "country": "Turks and Caicos",
+    "confirmed": 12,
+    "recovered": 5,
+    "critical": 0,
+    "deaths": 1,
+    "latitude": 21.694025,
+    "longitude": -71.797928
+  },
+  {
+    "country": "Tuvalu",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -7.109535,
+    "longitude": 177.64933
+  },
+  {
+    "country": "U.S. Virgin Islands",
+    "confirmed": 17,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 18.335765,
+    "longitude": -64.896335
+  },
+  {
+    "country": "UAE",
+    "confirmed": 12481,
+    "recovered": 2429,
+    "critical": 1,
+    "deaths": 105,
+    "latitude": 23.424076,
+    "longitude": 53.847818
+  },
+  {
+    "country": "Uganda",
+    "confirmed": 81,
+    "recovered": 52,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 1.373333,
+    "longitude": 32.290275
+  },
+  {
+    "country": "UK",
+    "confirmed": 165221,
+    "recovered": 1918,
+    "critical": 1559,
+    "deaths": 26097,
+    "latitude": 55.378051,
+    "longitude": -3.435973
+  },
+  {
+    "country": "Ukraine",
+    "confirmed": 10406,
+    "recovered": 1238,
+    "critical": 138,
+    "deaths": 261,
+    "latitude": 48.379433,
+    "longitude": 31.16558
+  },
+  {
+    "country": "United States Minor Outlying Islands",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 19.295374,
+    "longitude": 166.6280441
+  },
+  {
+    "country": "Uruguay",
+    "confirmed": 630,
+    "recovered": 412,
+    "critical": 11,
+    "deaths": 15,
+    "latitude": -32.522779,
+    "longitude": -55.765835
+  },
+  {
+    "country": "USA",
+    "confirmed": 1065956,
+    "recovered": 147473,
+    "critical": 18851,
+    "deaths": 61734,
+    "latitude": 37.09024,
+    "longitude": -95.712891
+  },
+  {
+    "country": "Uzbekistan",
+    "confirmed": 2017,
+    "recovered": 1126,
+    "critical": 8,
+    "deaths": 9,
+    "latitude": 41.377491,
+    "longitude": 64.585262
+  },
+  {
+    "country": "Vanuatu",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -15.376706,
+    "longitude": 166.959158
+  },
+  {
+    "country": "Vatican City",
+    "confirmed": 10,
+    "recovered": 2,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 41.902916,
+    "longitude": 12.453389
+  },
+  {
+    "country": "Venezuela",
+    "confirmed": 331,
+    "recovered": 142,
+    "critical": 2,
+    "deaths": 10,
+    "latitude": 6.42375,
+    "longitude": -66.58973
+  },
+  {
+    "country": "Vietnam",
+    "confirmed": 270,
+    "recovered": 225,
+    "critical": 8,
+    "deaths": 0,
+    "latitude": 14.058324,
+    "longitude": 108.277199
+  },
+  {
+    "country": "Wallis and Futuna",
+    "confirmed": 0,
+    "recovered": 0,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": -13.768752,
+    "longitude": -177.156097
+  },
+  {
+    "country": "Western Sahara",
+    "confirmed": 6,
+    "recovered": 5,
+    "critical": 0,
+    "deaths": 0,
+    "latitude": 24.215527,
+    "longitude": -12.885834
+  },
+  {
+    "country": "Yemen",
+    "confirmed": 6,
+    "recovered": 1,
+    "critical": 0,
+    "deaths": 2,
+    "latitude": 15.552727,
+    "longitude": 48.516388
+  },
+  {
+    "country": "Zambia",
+    "confirmed": 97,
+    "recovered": 54,
+    "critical": 1,
+    "deaths": 3,
+    "latitude": -13.133897,
+    "longitude": 27.849332
+  },
+  {
+    "country": "Zimbabwe",
+    "confirmed": 40,
+    "recovered": 5,
+    "critical": 0,
+    "deaths": 4,
+    "latitude": -19.015438,
+    "longitude": 29.154857
+  }
+]
