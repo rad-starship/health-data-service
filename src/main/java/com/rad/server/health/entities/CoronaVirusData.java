@@ -15,6 +15,7 @@ public class CoronaVirusData
 	String  continent;		// example: Europe
 	String	country;		// example: "United Kingdom"
 	String	provinceState;	// example: "British Virgin Islands"
+	long    population;		// example: 26023100
 	long	lastChange;		// example: 1586081775000
 	long	lastUpdate;		// example: 1586081775000
 	double	lat;			// example: 53.9333
@@ -23,8 +24,7 @@ public class CoronaVirusData
 	int		recovered;		// example: 0
 	int     active;         // example: 7
 	int 	critical;		// example: 3
-	int		deaths;			// example: 20
-	
+	int		deaths;			// example: 20	
 
 	public CoronaVirusData()
 	{
@@ -60,6 +60,7 @@ public class CoronaVirusData
 		{
 			this.country = (String) countryData.get("country");
 			this.continent = ContinentUtils.getContinent(country);
+			this.population = ContinentUtils.getPopulation(country);
 		}
 		if (countryData.get("lastChange") != null)
 			this.lastChange = javax.xml.bind.DatatypeConverter.parseDateTime(countryData.get("lastChange").toString()).getTimeInMillis();
@@ -197,5 +198,35 @@ public class CoronaVirusData
 	public void setContinent(String continent)
 	{
 		this.continent = continent;
+	}
+
+	public long getPopulation()
+	{
+		return this.population;
+	}
+
+	public void setPopulation(long population)
+	{
+		this.population = population;
+	}
+
+	public int getActive()
+	{
+		return this.active;
+	}
+
+	public void setActive(int active)
+	{
+		this.active = active;
+	}
+
+	public int getCritical()
+	{
+		return this.critical;
+	}
+
+	public void setCritical(int critical)
+	{
+		this.critical = critical;
 	}
 }

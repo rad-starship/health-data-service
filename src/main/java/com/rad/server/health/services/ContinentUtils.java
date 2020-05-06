@@ -18,7 +18,8 @@ public class ContinentUtils
 	public static String CONTINENT_AUSTRALIA = "Australia";	
 	
 	private static HashMap<String, String> continentMap = new HashMap<>();
-	
+	private static HashMap<String, Long> populationMap = new HashMap<>();
+
 	static
 	{
 		parse();
@@ -35,7 +36,7 @@ public class ContinentUtils
 		{
 			JSONParser parser = new JSONParser();
 			
-			File file = ResourceUtils.getFile("classpath:countriesData.json");
+			File file = ResourceUtils.getFile("classpath:countries.json");
 			Object obj = parser.parse(new FileReader(file.getPath()));
 
 			JSONArray countryList = (JSONArray) obj;
@@ -47,6 +48,9 @@ public class ContinentUtils
 				String name   = next.get("name").toString();
 				String region = next.get("region").toString();
 				continentMap.put(name, region);
+				
+				long population = Long.parseLong(next.get("population").toString());
+				populationMap.put(name, population);
 			}
 		}
 		catch (Exception e)
@@ -57,12 +61,29 @@ public class ContinentUtils
 	
 	public static String getContinent(String countryName)
 	{
-		if (countryName.equals("USA"))
-			countryName = "United States";
+		countryName = normalizeCountryName(countryName);
 		
 		if (continentMap.containsKey(countryName))
 			return continentMap.get(countryName);
 		
 		return "Unknown";
+	}
+
+	public static long getPopulation(String countryName)
+	{
+		countryName = normalizeCountryName(countryName);
+		
+		if (populationMap.containsKey(countryName))
+			return populationMap.get(countryName).longValue();
+		
+		return 0;
+	}
+	
+	private static String normalizeCountryName(String countryName)
+	{
+		if (countryName.equals("USA"))
+			return "United States";
+		
+		return countryName;
 	}
 }
