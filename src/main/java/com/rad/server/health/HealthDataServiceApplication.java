@@ -1,6 +1,8 @@
 package com.rad.server.health;
 
 import java.net.*;
+
+import com.rad.server.health.adapters.MultitenantConfiguration;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
@@ -9,6 +11,7 @@ import org.springframework.context.*;
 import org.springframework.core.env.*;
 
 @SpringBootApplication
+@ImportAutoConfiguration(MultitenantConfiguration.class)
 public class HealthDataServiceApplication implements ApplicationListener<ApplicationReadyEvent>
 {
     @Autowired
