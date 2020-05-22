@@ -84,6 +84,7 @@ public class CoronaVirusData
 			this.deaths = (int) countryData.get("deaths");		
 	}
 
+
 	public String getId()
 	{
 		return this.id;

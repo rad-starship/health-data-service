@@ -2,6 +2,9 @@ package com.rad.server.health.services;
 
 import java.text.*;
 import java.util.*;
+
+import org.keycloak.adapters.springsecurity.client.KeycloakRestTemplate;
+import org.keycloak.representations.AccessToken;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
 import org.springframework.stereotype.*;
@@ -22,19 +25,18 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		
 	@Autowired
 	private CoronaRepository	coronaRepository;
+	@Autowired
+	private KeycloakRestTemplate keycloakRestTemplate;
+	private boolean isToUseKeycloakRestTemplate = true;
+
+	@Autowired
+	private AccessToken token;
 
 	public CoronaVirusServiceImpl()
 	{
 		ContinentUtils.init();
 	}
-	
-	private void test()
-	{
-		getTotalsLatest();
-		getTotalsDaily(System.currentTimeMillis() - 1000*60*60*24);
-		getCountriesLatest();
-		getCountryDaily(System.currentTimeMillis() - 1000*60*60*24, "Spain");		
-	}
+
 	
 	public List<CoronaVirusData> getRealList()
 	{
@@ -45,7 +47,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		}
 		else
 		{
-			List<CoronaVirusData> dataFromApi = getCountriesLatest();
+			List<CoronaVirusData> dataFromApi = getCountriesLatest(null);
 			coronaRepository.saveAll(list);
 		}
 		
@@ -80,7 +82,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		]
 	 * @return
 	 */
-	private List<CoronaVirusData> getListOfCountries()
+	private List<CoronaVirusData> getListOfCountries(HttpHeaders headers)
 	{
 		return getDataFromApi("help/countries", "ebfe2c57a8msha005ee72e713c84p19ce3ejsn6f034987944d");
 	}
@@ -99,9 +101,10 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		    }
 		]
 	 */
-	public CoronaVirusData getTotalsLatest()
+	public CoronaVirusData getTotalsLatest(HttpHeaders headers)
 	{
 		List<CoronaVirusData> data = getDataFromApi("totals", "10e0755bcfmsh70fb720b18c677cp1b66efjsn8136ec80a4cc");
+		getTenantsFromNMS(headers);
 		return data == null || data.isEmpty() ? new CoronaVirusData() : data.get(0);
 	}
 	
@@ -120,7 +123,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		    }
 		]
 	 */
-	public CoronaVirusData getTotalsDaily(long date)
+	public CoronaVirusData getTotalsDaily(long date,HttpHeaders headers)
 	{
 		String requestedDay = new SimpleDateFormat("yyyy-MM-dd").format(new Date(date));		
 		List<CoronaVirusData> data = getDataFromApi("report/totals?date-format=YYYY-MM-DD&format=json&date="+requestedDay, "ebfe2c57a8msha005ee72e713c84p19ce3ejsn6f034987944d");
@@ -156,7 +159,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		]
 	 * @return
 	 */
-	public List<CoronaVirusData> getCountriesLatest()
+	public List<CoronaVirusData> getCountriesLatest(HttpHeaders headers)
 	{
 		return getDataFromApi("country/all", "10e0755bcfmsh70fb720b18c677cp1b66efjsn8136ec80a4cc");
 	}
@@ -214,7 +217,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		     }
 		]	
 	 */
-	public List<CoronaVirusData> getCountryDaily(long date, String countryName)
+	public List<CoronaVirusData> getCountryDaily(long date, String countryName,HttpHeaders headers)
 	{
 		String requestedDay = new SimpleDateFormat("yyyy-MM-dd").format(new Date(date));		
 		return getDataFromApi("report/country/name?date-format=YYYY-MM-DD&format=json&date="+requestedDay+"&name=" + countryName, "ebfe2c57a8msha005ee72e713c84p19ce3ejsn6f034987944d");
@@ -285,5 +288,20 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		list.add(new CoronaVirusData("" + counter++, "Asia", "China", System.currentTimeMillis(), 0, 0, 66, 1231, 234234));
 
 		return list;
+	}
+
+	private List<String> getTenantsFromNMS(HttpHeaders headers){
+		// Execute the method writing your HttpEntity to the request
+		List<String> tenants= (List<String>)getForEntity("http://localhost:8081/users/getTokenTenants/"+token.getPreferredUsername(),headers);
+		for(String i:tenants){
+			System.out.println(i);
+		}
+		return tenants;
+	}
+
+	private Object getForEntity(String url, HttpHeaders headers) {
+		HttpEntity<Object> requestUpdate = new HttpEntity<>(headers);
+		ResponseEntity<Object> response = new RestTemplate().exchange(url,HttpMethod.GET,requestUpdate, Object.class);
+		return response.getBody();
 	}
 }
