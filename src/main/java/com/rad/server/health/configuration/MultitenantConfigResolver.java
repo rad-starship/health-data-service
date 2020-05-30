@@ -1,5 +1,6 @@
 package com.rad.server.health.configuration;
 
+import org.apache.commons.codec.binary.Base64;
 import org.keycloak.adapters.KeycloakConfigResolver;
 import org.keycloak.adapters.KeycloakDeployment;
 import org.keycloak.adapters.KeycloakDeploymentBuilder;
@@ -20,17 +21,21 @@ public class MultitenantConfigResolver implements KeycloakConfigResolver {
 
     @Override
     public KeycloakDeployment resolve(OIDCHttpFacade.Request request) {
-        String realm = request.getHeader("realm");
-        if(realm==null){
-            realm = "Admin";//default value for none value (login request)
+        String realm = "None";
+        String auth = request.getHeader("Authorization");
+
+        if(auth!=null) {
+            String jwt = auth.split(" ")[1];
+            realm = getRealmFromJWT(jwt);
         }
+
         KeycloakDeployment deployment = cache.get(realm);
         if (null == deployment) {
             // not found on the simple cache, try to load it from the file system
-        AdapterConfig adapterConfig = new AdapterConfig();
-        adapterConfig.setRealm(realm);
-        adapterConfig.setAuthServerUrl(authServerUrl);
-        adapterConfig.setResource(resource);
+            AdapterConfig adapterConfig = new AdapterConfig();
+            adapterConfig.setRealm(realm);
+            adapterConfig.setAuthServerUrl(authServerUrl);
+            adapterConfig.setResource(resource);
             deployment = KeycloakDeploymentBuilder.build(adapterConfig);
             cache.put(realm, deployment);
         }
@@ -40,6 +45,28 @@ public class MultitenantConfigResolver implements KeycloakConfigResolver {
 
     public static void setAdapterConfig(AdapterConfig adapterConfig) {
         MultitenantConfigResolver.adapterConfig = adapterConfig;
+    }
+
+    /**
+     * The function recieves the JWT token from header and parse it to find the realm name.
+     * @param jwtToken  Original JWT Token
+     * @return realm name
+     */
+    private String getRealmFromJWT(String jwtToken)  {
+        String[] split_string = jwtToken.split("\\.");
+        String base64EncodedBody = split_string[1];
+        Base64 base64Url = new Base64(true);
+
+        String[] body = new String(base64Url.decode(base64EncodedBody)).split(",");
+        for (String row : body){
+            if (row.contains("iss")){
+                String[] realmAdress = row.split("/");
+                String realm = realmAdress[realmAdress.length-1];
+                realm = realm.substring(0,realm.length()-1);
+                return realm;
+            }
+        }
+        return null;
     }
 
 }
