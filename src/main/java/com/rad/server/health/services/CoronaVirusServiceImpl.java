@@ -238,10 +238,10 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 
 		// Execute the method writing your HttpEntity to the request
 		RestTemplate restTemplate = new RestTemplate();
-		ResponseEntity<ArrayList> response = restTemplate.exchange(apiUri, HttpMethod.GET, entity, ArrayList.class);
+		ResponseEntity<Object> response = restTemplate.exchange(apiUri, HttpMethod.GET, entity, Object.class);
 		if (response.getStatusCode().value() == 200)
 		{
-			List<Map> dataFromApi = response.getBody();
+			List<Map> dataFromApi = (List<Map>) response.getBody();
 			if (dataFromApi != null)
 			{
 				List<CoronaVirusData> list = new ArrayList<CoronaVirusData>();
