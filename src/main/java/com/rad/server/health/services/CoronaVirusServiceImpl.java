@@ -23,7 +23,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 	private final static String	COVID_19_DATA_HOST		  = "covid-19-data.p.rapidapi.com";
 	private final static String	COVID_19_DATA_URL	      = "https://" + COVID_19_DATA_HOST + "/";
 	private final static String nmsUri = "http://localhost:8081/users/getTokenTenants/";
-		
+
 	@Autowired
 	private CoronaRepository	coronaRepository;
 	@Autowired
