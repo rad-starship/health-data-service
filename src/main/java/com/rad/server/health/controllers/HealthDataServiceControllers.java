@@ -42,7 +42,7 @@ public class HealthDataServiceControllers
 	@ResponseBody
 	public List<CoronaVirusData> corona(@RequestHeader HttpHeaders headers)
 	{
-		return getCountriesLatest(headers);
+		return coronaVirusService.getDataByTeanant(headers);
 	}
 	
 	@GetMapping("/countriesLatest")

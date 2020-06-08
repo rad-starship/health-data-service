@@ -11,4 +11,6 @@ public interface CoronaVirusService
 	
 	List<CoronaVirusData> getCountriesLatest(HttpHeaders headers);
 	List<CoronaVirusData> getCountryDaily(long date, String countryName,HttpHeaders headers);
+
+    List<CoronaVirusData> getDataByTeanant(HttpHeaders headers);
 }

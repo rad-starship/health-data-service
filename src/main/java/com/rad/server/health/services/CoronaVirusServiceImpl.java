@@ -22,6 +22,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 	private final static String	COVID_19_DATA_KEY_HEADER  = "X-RapidAPI-Key";
 	private final static String	COVID_19_DATA_HOST		  = "covid-19-data.p.rapidapi.com";
 	private final static String	COVID_19_DATA_URL	      = "https://" + COVID_19_DATA_HOST + "/";
+	private final static String nmsUri = "http://localhost:8081/users/getTokenTenants/";
 		
 	@Autowired
 	private CoronaRepository	coronaRepository;
@@ -222,7 +223,14 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		String requestedDay = new SimpleDateFormat("yyyy-MM-dd").format(new Date(date));		
 		return getDataFromApi("report/country/name?date-format=YYYY-MM-DD&format=json&date="+requestedDay+"&name=" + countryName, "ebfe2c57a8msha005ee72e713c84p19ce3ejsn6f034987944d");
 	}
-	
+
+	public List<CoronaVirusData> getCountry(String countryName,HttpHeaders headers)
+	{
+		return getDataFromApi("country?name=" + countryName, "ebfe2c57a8msha005ee72e713c84p19ce3ejsn6f034987944d");
+	}
+
+
+
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private List<CoronaVirusData> getDataFromApi(String releativeUri, String key)
 	{
@@ -241,7 +249,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		ResponseEntity<ArrayList> response = restTemplate.exchange(apiUri, HttpMethod.GET, entity, ArrayList.class);
 		if (response.getStatusCode().value() == 200)
 		{
-			List<Map> dataFromApi = response.getBody();
+			List<Map> dataFromApi =  response.getBody();
 			if (dataFromApi != null)
 			{
 				List<CoronaVirusData> list = new ArrayList<CoronaVirusData>();
@@ -292,7 +300,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 
 	private List<String> getTenantsFromNMS(HttpHeaders headers){
 		// Execute the method writing your HttpEntity to the request
-		List<String> tenants= (List<String>)getForEntity("http://localhost:8081/users/getTokenTenants/"+token.getPreferredUsername(),headers);
+		List<String> tenants= (List<String>)getForEntity(nmsUri+token.getPreferredUsername(),headers);
 		for(String i:tenants){
 			System.out.println(i);
 		}
@@ -304,4 +312,17 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		ResponseEntity<Object> response = new RestTemplate().exchange(url,HttpMethod.GET,requestUpdate, Object.class);
 		return response.getBody();
 	}
+
+
+	public List<CoronaVirusData> getDataByTeanant(HttpHeaders headers){
+		List<CoronaVirusData> data = new ArrayList<>();
+		List<String> countries = ContinentUtils.getCountries("Asia");
+		//TODO: For each country get data from api and add to list.
+		for(String country : countries){
+			data.addAll(getCountry(country,headers));
+		}
+		return data;
+
+	}
+
 }

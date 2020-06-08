@@ -19,6 +19,7 @@ public class ContinentUtils
 	
 	private static HashMap<String, String> continentMap = new HashMap<>();
 	private static HashMap<String, Long> populationMap = new HashMap<>();
+	private static HashMap<String,List<String>> countriesMap = new HashMap<>();
 
 	static
 	{
@@ -48,6 +49,9 @@ public class ContinentUtils
 				String name   = next.get("name").toString();
 				String region = next.get("region").toString();
 				continentMap.put(name, region);
+				countriesMap.computeIfAbsent(region, k -> new ArrayList<>());
+				countriesMap.get(region).add(name);
+
 				
 				long population = Long.parseLong(next.get("population").toString());
 				populationMap.put(name, population);
@@ -67,6 +71,10 @@ public class ContinentUtils
 			return continentMap.get(countryName);
 		
 		return "Unknown";
+	}
+
+	public static List<String> getCountries(String continent){
+		return countriesMap.get(continent);
 	}
 
 	public static long getPopulation(String countryName)
