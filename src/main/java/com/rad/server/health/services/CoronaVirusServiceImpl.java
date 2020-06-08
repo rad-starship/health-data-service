@@ -23,7 +23,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 	private final static String	COVID_19_DATA_HOST		  = "covid-19-data.p.rapidapi.com";
 	private final static String	COVID_19_DATA_URL	      = "https://" + COVID_19_DATA_HOST + "/";
 	private final static String nmsUri = "http://localhost:8081/users/getTokenTenants/";
-
+	private final static int MAX_REQUEST_PER_ACTION = 10;
 	@Autowired
 	private CoronaRepository	coronaRepository;
 	@Autowired
@@ -313,13 +313,20 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		return response.getBody();
 	}
 
-
+	/**
+	 * The function recieves continents from token and then gets data from the API for the relevant continent Countries.
+	 * @return list of corona info based on the continent.
+	 */
 	public List<CoronaVirusData> getDataByTeanant(HttpHeaders headers){
 		List<CoronaVirusData> data = new ArrayList<>();
-		List<String> countries = ContinentUtils.getCountries("Asia");
-		//TODO: For each country get data from api and add to list.
+		List<String> continents = getTenantsFromNMS(headers);
+		List<String> countries = ContinentUtils.getCountries(continents);
+		int counter = 0;
 		for(String country : countries){
 			data.addAll(getCountry(country,headers));
+			counter++;
+			if (counter >= MAX_REQUEST_PER_ACTION)
+				break;
 		}
 		return data;
 

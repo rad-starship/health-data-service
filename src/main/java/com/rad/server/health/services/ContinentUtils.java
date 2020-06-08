@@ -73,8 +73,22 @@ public class ContinentUtils
 		return "Unknown";
 	}
 
-	public static List<String> getCountries(String continent){
-		return countriesMap.get(continent);
+	public static List<String> getCountries(List<String> continent){
+		List<String> countries = new ArrayList<>();
+		if(continent.contains("Admin")){
+			for(List<String> countryList : countriesMap.values()){
+				countries.addAll(countryList);
+			}
+		}
+		else {
+			for (String cont : continent) {
+				cont = cont.equals("America")?cont+"s":cont;
+				List<String> listCountry = countriesMap.get(cont);
+				if(listCountry!=null)
+					countries.addAll(listCountry);
+			}
+		}
+		return countries;
 	}
 
 	public static long getPopulation(String countryName)
