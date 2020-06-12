@@ -6,11 +6,13 @@ import com.rad.server.health.adapters.MultitenantConfiguration;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
+import org.springframework.boot.autoconfigure.elasticsearch.rest.RestClientAutoConfiguration;
 import org.springframework.boot.context.event.*;
 import org.springframework.context.*;
 import org.springframework.core.env.*;
 
-@SpringBootApplication
+//Exclude RestClientAutoConfiguration to work with elastic
+@SpringBootApplication(exclude = RestClientAutoConfiguration.class)
 @ImportAutoConfiguration(MultitenantConfiguration.class)
 public class HealthDataServiceApplication implements ApplicationListener<ApplicationReadyEvent>
 {

@@ -1,8 +1,12 @@
 package com.rad.server.health.services;
 
+import java.io.IOException;
 import java.text.*;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+import com.rad.server.health.presistance.EsConnectionHandler;
 import org.keycloak.adapters.springsecurity.client.KeycloakRestTemplate;
 import org.keycloak.representations.AccessToken;
 import org.springframework.beans.factory.annotation.*;
@@ -26,6 +30,8 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 	private final static int MAX_REQUEST_PER_ACTION = 10;
 	@Autowired
 	private CoronaRepository	coronaRepository;
+
+
 	@Autowired
 	private KeycloakRestTemplate keycloakRestTemplate;
 	private boolean isToUseKeycloakRestTemplate = true;
@@ -320,16 +326,52 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 	public List<CoronaVirusData> getDataByTeanant(HttpHeaders headers){
 		List<CoronaVirusData> data = new ArrayList<>();
 		List<String> continents = getTenantsFromNMS(headers);
+
+		data = getDataFromEs(continents);
+		if(data.size()>0)
+			return data;
+
 		List<String> countries = ContinentUtils.getCountries(continents);
 		int counter = 0;
 		for(String country : countries){
 			data.addAll(getCountry(country,headers));
 			counter++;
-			if (counter >= MAX_REQUEST_PER_ACTION)
-				break;
 		}
+
+		saveToEs(data);
 		return data;
 
+	}
+
+	private List<CoronaVirusData> getDataFromEs(List<String> continents) {
+
+		if(continents.contains("Admin")){
+			continents.remove("Admin");
+			continents.addAll(Stream.of("Asia","America","Africa","Europe").collect(Collectors.toList()));
+		}
+
+		EsConnectionHandler.makeConnection();
+		List<CoronaVirusData> data = new ArrayList<>();
+		for(String continent : continents){
+			data.addAll(EsConnectionHandler.getByContinent(continent));
+		}
+		try {
+			EsConnectionHandler.closeConnection();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return data;
+	}
+
+	private void saveToEs(List<CoronaVirusData> data) {
+		EsConnectionHandler.makeConnection();
+		for(CoronaVirusData cData:data)
+			EsConnectionHandler.insertData(cData);
+		try {
+			EsConnectionHandler.closeConnection();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
