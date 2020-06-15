@@ -1,6 +1,7 @@
 package com.rad.server.health.services;
 
 import java.io.IOException;
+import java.net.ConnectException;
 import java.text.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -349,27 +350,31 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 			continents.remove("Admin");
 			continents.addAll(Stream.of("Asia","America","Africa","Europe").collect(Collectors.toList()));
 		}
-
-		EsConnectionHandler.makeConnection();
 		List<CoronaVirusData> data = new ArrayList<>();
-		for(String continent : continents){
-			data.addAll(EsConnectionHandler.getByContinent(continent));
-		}
 		try {
+			EsConnectionHandler.makeConnection();
+
+			for (String continent : continents) {
+				data.addAll(EsConnectionHandler.getByContinent(continent));
+			}
+
 			EsConnectionHandler.closeConnection();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("An Error Accrued In Es : " + e.getMessage());
+		} catch(Exception e){
+			System.out.println("An Error Accrued In Es");
 		}
 		return data;
 	}
 
 	private void saveToEs(List<CoronaVirusData> data) {
-		EsConnectionHandler.makeConnection();
-		for(CoronaVirusData cData:data)
-			EsConnectionHandler.insertData(cData);
 		try {
+			EsConnectionHandler.makeConnection();
+			for (CoronaVirusData cData : data)
+				EsConnectionHandler.insertData(cData);
 			EsConnectionHandler.closeConnection();
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
