@@ -27,7 +27,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 	private final static String	COVID_19_DATA_KEY_HEADER  = "X-RapidAPI-Key";
 	private final static String	COVID_19_DATA_HOST		  = "covid-19-data.p.rapidapi.com";
 	private final static String	COVID_19_DATA_URL	      = "https://" + COVID_19_DATA_HOST + "/";
-	private final static String nmsUri = "http://localhost:8081/users/getTokenTenants/";
+	private final static String nmsUri = "http://localhost:8081/users/getContinentsByToken/";
 	private final static int MAX_REQUEST_PER_ACTION = 10;
 	@Autowired
 	private CoronaRepository	coronaRepository;
