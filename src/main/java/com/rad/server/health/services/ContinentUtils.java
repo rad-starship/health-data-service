@@ -67,8 +67,11 @@ public class ContinentUtils
 	{
 		countryName = normalizeCountryName(countryName);
 		
-		if (continentMap.containsKey(countryName))
-			return continentMap.get(countryName);
+		if (continentMap.containsKey(countryName)) {
+			String result = continentMap.get(countryName);
+			if(result.equals("Americas")) return "America";
+			return result;
+		}
 		
 		return "Unknown";
 	}
