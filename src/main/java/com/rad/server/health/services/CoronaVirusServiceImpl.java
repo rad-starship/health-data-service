@@ -27,7 +27,10 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 	private final static String	COVID_19_DATA_KEY_HEADER  = "X-RapidAPI-Key";
 	private final static String	COVID_19_DATA_HOST		  = "covid-19-data.p.rapidapi.com";
 	private final static String	COVID_19_DATA_URL	      = "https://" + COVID_19_DATA_HOST + "/";
-	private final static String nmsUri = "http://localhost:8081/users/getContinentsByToken/";
+	private final static String nms = "http://localhost:8081/";
+	private final static String nmsUri = nms +"users/getContinentsByToken/";
+	private final static String isOnlineUri = nms+"settings/isOnline";
+
 	private final static int MAX_REQUEST_PER_ACTION = 10;
 	@Autowired
 	private CoronaRepository	coronaRepository;
@@ -305,20 +308,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		return list;
 	}
 
-	private List<String> getTenantsFromNMS(HttpHeaders headers){
-		// Execute the method writing your HttpEntity to the request
-		List<String> tenants= (List<String>)getForEntity(nmsUri+token.getPreferredUsername(),headers);
-		for(String i:tenants){
-			System.out.println(i);
-		}
-		return tenants;
-	}
 
-	private Object getForEntity(String url, HttpHeaders headers) {
-		HttpEntity<Object> requestUpdate = new HttpEntity<>(headers);
-		ResponseEntity<Object> response = new RestTemplate().exchange(url,HttpMethod.GET,requestUpdate, Object.class);
-		return response.getBody();
-	}
 
 	/**
 	 * The function recieves continents from token and then gets data from the API for the relevant continent Countries.
@@ -328,9 +318,11 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		List<CoronaVirusData> data = new ArrayList<>();
 		List<String> continents = getTenantsFromNMS(headers);
 
-		data = getDataFromEs(continents);
-		if(data.size()>0)
-			return data;
+		if(!isOnline(headers)) {
+			data = getDataFromEs(continents);
+			if (data.size() > 0)
+				return data;
+		}
 
 		List<String> countries = ContinentUtils.getCountries(continents);
 		int counter = 0;
@@ -377,6 +369,31 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	//***********************************************************************
+	//                          NMS communication
+	//***********************************************************************
+
+
+	private List<String> getTenantsFromNMS(HttpHeaders headers){
+		// Execute the method writing your HttpEntity to the request
+		List<String> tenants= (List<String>)getForEntity(nmsUri+token.getPreferredUsername(),headers);
+		for(String i:tenants){
+			System.out.println(i);
+		}
+		return tenants;
+	}
+
+	private boolean isOnline(HttpHeaders headers){
+		boolean result = (boolean)getForEntity(isOnlineUri,headers);
+		return result;
+	}
+
+	private Object getForEntity(String url, HttpHeaders headers) {
+		HttpEntity<Object> requestUpdate = new HttpEntity<>(headers);
+		ResponseEntity<Object> response = new RestTemplate().exchange(url,HttpMethod.GET,requestUpdate, Object.class);
+		return response.getBody();
 	}
 
 }
