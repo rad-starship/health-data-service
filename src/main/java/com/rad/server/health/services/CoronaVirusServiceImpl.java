@@ -35,6 +35,8 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 	@Autowired
 	private CoronaRepository	coronaRepository;
 
+	@Autowired
+	private EsConnectionHandler esConnectionHandler;
 
 	@Autowired
 	private KeycloakRestTemplate keycloakRestTemplate;
@@ -344,13 +346,13 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		}
 		List<CoronaVirusData> data = new ArrayList<>();
 		try {
-			EsConnectionHandler.makeConnection();
+			esConnectionHandler.makeConnection();
 
 			for (String continent : continents) {
-				data.addAll(EsConnectionHandler.getByContinent(continent));
+				data.addAll(esConnectionHandler.getByContinent(continent));
 			}
 
-			EsConnectionHandler.closeConnection();
+			esConnectionHandler.closeConnection();
 		} catch (IOException e) {
 			System.out.println("An Error Accrued In Es : " + e.getMessage());
 		} catch(Exception e){
@@ -361,10 +363,10 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 
 	private void saveToEs(List<CoronaVirusData> data) {
 		try {
-			EsConnectionHandler.makeConnection();
+			esConnectionHandler.makeConnection();
 			for (CoronaVirusData cData : data)
-				EsConnectionHandler.insertData(cData);
-			EsConnectionHandler.closeConnection();
+				esConnectionHandler.insertData(cData);
+			esConnectionHandler.closeConnection();
 		}
 		catch (IOException e) {
 			e.printStackTrace();

@@ -2,6 +2,7 @@ package com.rad.server.health.presistance;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.rad.server.health.components.EsProperties;
 import com.rad.server.health.entities.CoronaVirusData;
 import org.apache.http.HttpHost;
 import org.elasticsearch.ElasticsearchException;
@@ -17,42 +18,50 @@ import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Component
 public class EsConnectionHandler {
 
     //The config parameters for the connection
-    private static final String HOST = "localhost";
-    private static final int PORT_ONE = 9200;
-    private static final String SCHEME = "http";
 
-    private static RestHighLevelClient restHighLevelClient;
-    private static ObjectMapper objectMapper = new ObjectMapper();
-
-    private static final String INDEX = "corona_data";
+    @Autowired
+    private EsProperties esProperties;
 
 
+    private  RestHighLevelClient restHighLevelClient;
+    private  ObjectMapper objectMapper = new ObjectMapper();
 
-    public static synchronized RestHighLevelClient makeConnection() {
+    private  final String INDEX = "corona_data";
+
+
+
+    public  synchronized RestHighLevelClient makeConnection() {
+
 
         if(restHighLevelClient == null) {
             restHighLevelClient = new RestHighLevelClient(
                     RestClient.builder(
-                            new HttpHost(HOST, PORT_ONE, SCHEME)));
+                            new HttpHost(esProperties.getUrl(),
+                                    esProperties.getPort(),
+                                    esProperties.getScheme())));
         }
 
         return restHighLevelClient;
     }
 
-    public static synchronized void closeConnection() throws IOException {
+    public  synchronized void closeConnection() throws IOException {
         restHighLevelClient.close();
         restHighLevelClient = null;
     }
 
-    public static CoronaVirusData insertData(CoronaVirusData data){
+    public  CoronaVirusData insertData(CoronaVirusData data){
         data.setId(UUID.randomUUID().toString());
         String dataMap = null;
         try {
@@ -74,7 +83,7 @@ public class EsConnectionHandler {
         return data;
     }
 
-    public static List<CoronaVirusData> getByContinent(String continent){
+    public  List<CoronaVirusData> getByContinent(String continent){
         SearchSourceBuilder builder = new SearchSourceBuilder().size(1000)
                 .query(QueryBuilders.boolQuery()
                         .must(QueryBuilders
@@ -87,7 +96,7 @@ public class EsConnectionHandler {
         try {
             response = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
         } catch (IOException e) {
-            e.printStackTrace();
+
         }
         catch (ElasticsearchException e){
             e.getDetailedMessage();
