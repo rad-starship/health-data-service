@@ -74,31 +74,7 @@ public class CoronaVirusServiceImpl implements CoronaVirusService
 		return coronaRepository.count() > 0;
 	}
 
-	/**
-	 * Get data for each country.
-	 * For example: 
-		[
-		    {
-		        "name": "Afghanistan",
-		        "alpha2code": "AF",
-		        "alpha3code": "AFG",
-		        "latitude": 33.93911,
-		        "longitude": 67.709953
-		    },
-		    {
-		        "name": "Åland Islands",
-		        "alpha2code": "AX",
-		        "alpha3code": "ALA",
-		        "latitude": 60.1995487,
-		        "longitude": 20.3711715
-		    }
-		]
-	 * @return
-	 */
-	private List<CoronaVirusData> getListOfCountries(HttpHeaders headers)
-	{
-		return getDataFromApi("help/countries", "ebfe2c57a8msha005ee72e713c84p19ce3ejsn6f034987944d");
-	}
+
 	
 	/**
 	 * Get latest data for whole world.
