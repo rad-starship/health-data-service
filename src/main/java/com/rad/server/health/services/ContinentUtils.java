@@ -2,9 +2,10 @@ package com.rad.server.health.services;
 
 import java.io.*;
 import java.util.*;
+import org.elasticsearch.core.internal.io.*;
 import org.json.simple.*;
 import org.json.simple.parser.*;
-import org.springframework.util.*;
+import org.springframework.core.io.*;
 
 /**
  * @author raz_o
@@ -20,7 +21,7 @@ public class ContinentUtils
 	private static HashMap<String, String> continentMap = new HashMap<>();
 	private static HashMap<String, Long> populationMap = new HashMap<>();
 	private static HashMap<String,List<String>> countriesMap = new HashMap<>();
-
+	
 	static
 	{
 		parse();
@@ -37,9 +38,14 @@ public class ContinentUtils
 		{
 			JSONParser parser = new JSONParser();
 			
-			File file = ResourceUtils.getFile("classpath:countries.json");
-			Object obj = parser.parse(new FileReader(file.getPath()));
-
+			//File   file = ResourceUtils.getFile("classpath:countries.json");
+       		//Object obj = parser.parse(new FileReader(file.getPath()));
+       		
+       		ClassPathResource classPathResource = new ClassPathResource("countries.json");
+       		InputStream inputStream = classPathResource.getInputStream();
+       		BufferedReader in = new BufferedReader(new InputStreamReader(inputStream));
+       		
+       		Object obj = parser.parse(in);
 			JSONArray countryList = (JSONArray) obj;
 
 			Iterator<JSONObject> iterator = countryList.iterator();
